@@ -13,8 +13,13 @@ project "PhysXFoundation"
 		"%{physxDir}/physx/source/foundation/include",
 	}
 	files { 
-		"%{physxDir}/physx/source/foundation/src/**.cpp",
-		"%{physxDir}/physx/source/foundation/include/**.h",
+		"%{physxDir}/physx/source/foundation/src/PsAllocator.cpp",
+		"%{physxDir}/physx/source/foundation/src/PsAssert.cpp",
+		"%{physxDir}/physx/source/foundation/src/PsFoundation.cpp",
+		"%{physxDir}/physx/source/foundation/src/PsMathUtils.cpp",
+		"%{physxDir}/physx/source/foundation/src/PsString.cpp",
+		"%{physxDir}/physx/source/foundation/src/PsTempAllocator.cpp",
+		"%{physxDir}/physx/source/foundation/src/PsUtilities.cpp",
 	} 
 	
 	defines {
@@ -31,12 +36,12 @@ project "PhysXFoundation"
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
-		removefiles { "%{physxDir}/physx/source/foundation/src/windows/**.cpp" } 
+		files {"%{physxDir}/physx/source/foundation/src/unix/**.cpp"}
 		includedirs { "%{physxDir}/physx/source/foundation/include/unix" }
 		
-	filter "system:windows"
+	filter "system:Windows"
 		systemversion "latest"
-		removefiles { "%{physxDir}/physx/source/foundation/src/unix/**.cpp" } 
+		files {"%{physxDir}/physx/source/foundation/src/windows/**.cpp"}
 		includedirs { "%{physxDir}/physx/source/foundation/include/windows" }
 
 
