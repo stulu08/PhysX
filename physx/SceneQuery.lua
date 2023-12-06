@@ -91,6 +91,6 @@ project "SceneQuery"
 		defines {
 			"_HAS_ITERATOR_DEBUGGING=0",
 			"_ITERATOR_DEBUG_LEVEL=0",
-			"PX_CHECKED=1",
+			"PX_CHECKED=0",
 			"NDEBUG"
 		}
