@@ -1,9 +1,7 @@
 project "PhysXVehicle"
 	kind "StaticLib"
 	language "C++"
-	if(staticRuntime) then
-		staticruntime "on"
-	end
+	staticruntime "off"
 	location "%{physxDir}"
 	targetdir ("bin/" .. outputdir .."")
 	objdir ("bin-int/" .. outputdir .."")
