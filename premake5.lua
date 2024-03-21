@@ -1,4 +1,4 @@
-
+physxDir = "%{ProjectDir.PhysX}"
 group "PhysX"
 include "physx/FastXml.lua"
 include "physx/LowLevel.lua"
